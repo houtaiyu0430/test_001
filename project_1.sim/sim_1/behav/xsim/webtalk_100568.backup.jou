@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Mar  5 22:49:16 2025
+# Process ID: 100568
+# Current directory: C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/test_fast_inverse_sqrt_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/test_fast_inverse_sqrt_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,0 +1,14 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: X:/vivado/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 22bcf920c2164f9192c46eb7b3dce8cb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_fast_inverse_sqrt_behav xil_defaultlib.test_fast_inverse_sqrt xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sources_1/new/quick.v" Line 1. Module fast_inverse_sqrt doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fast_inverse_sqrt
+Compiling module xil_defaultlib.test_fast_inverse_sqrt
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_fast_inverse_sqrt_behav

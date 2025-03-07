@@ -1,0 +1,11 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sim_1/new/test.v,1740910064,verilog,,,,Cordic_Test_tb,,,,,,,,
+C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sim_1/new/test_newton.v,1741000350,verilog,,,,test_newton_sqrt,,,,,,,,
+C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sim_1/new/test_quick.v,1741000432,verilog,,,,test_fast_inverse_sqrt,,,,,,,,
+C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sources_1/new/cordic.v,1740910042,verilog,,C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sim_1/new/test.v,,Cordic_Test,,,,,,,,
+C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sources_1/new/newton.v,1741000262,verilog,,C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sim_1/new/test_newton.v,,newton_sqrt,,,,,,,,
+C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sources_1/new/quick.v,1740914849,verilog,,C:/Users/Thinkpad/Desktop/vivado_project/project_1/project_1.srcs/sim_1/new/test_quick.v,,fast_inverse_sqrt,,,,,,,,
