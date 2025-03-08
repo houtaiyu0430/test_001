@@ -1,9 +1,11 @@
 <h1>sin_cos的快速算法</h1>
 <h3>多项式拟合:</h3>
 <p>首先是利用<strong>泰勒展开</strong>或者<strong>Chebyshev 逼近</strong>进行多项式拟合。</p>
+
 $$
 \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!}
 $$
+
 <p align="center">
     <img src="./picture/taylor.png" alt="1">
 </p>
@@ -12,21 +14,31 @@ $$
 <p align="center">
     <img src="picture/average.jpg" alt="2">
 </p>
+
 $$
-\y = 4/pi x - 4/pi^2 x^2
+y = \frac{4}{\pi} x - \frac{4}{\pi^2} x^2
 $$
+
 <p>这种方法的最大误差是0.056，而且这种方法没有累计误差。</p>
-<p>为了使图像在[-pi, pi]之间都有抛物线的拟合，可以用<br>
-```if(x > 0) { y = 4/pi x - 4/pi^2 x^2; } else { y = 4/pi x + 4/pi^2 x^2; }```进行拟合。</p>
-<p>但是这个if判断会综合出两个乘法器、一个加法器和一个减法器，加上一个比较器，还是比较占用资源，再用绝对值优化：4/pi x - x / abs(x) 4/pi^2 x^2，这样综合出条件反转逻辑，两个乘法器和一个减法器优化了资源利用</p>
-<p>对于cos(x)，只需要考虑相位变化就好了。<br>
-```x += pi/2;
+<p>为了使图像在 $[-\pi, \pi]$之间都有抛物线的拟合，可以用<br>
+
+```if(x > 0) { y = 4/pi x - 4/pi^2 x^2; } else { y = 4/pi x + 4/pi^2 x^2; }```
+进行拟合。</p>
+<p>但是这个if判断会综合出两个乘法器、一个加法器和一个减法器，加上一个比较器，还是比较占用资源，再用绝对值优化：$\frac{4}{\pi} x - \frac{x}{\lvert x \rvert} \cdot \frac{4}{\pi^2} x^2
+$ ，这样综合出条件反转逻辑，两个乘法器和一个减法器优化了资源利用</p>
+<p>对于cos(x)，只需要考虑相位变化就好了。
+
+```
+x += pi/2;
 x -= (x > pi) & (2 * pi);
 y=sin(x);
-```<br>
+```
+
 <p>规避掉了一个if的判断</p>
 <p>对于更高精度的要求，可以利用高次方把sinx的图像“按下去”</p>
+
 ```Q (4/pi x - 4/pi^2 x^2) + P (4/pi x - 4/pi^2 x^2)^2```
+
 <p align="center">
     <img src="picture/squared.jpg" alt="3">
 </p>
@@ -36,12 +48,15 @@ y=sin(x);
 </p>
 <p>最大误差是<strong>0.001</strong></p>
 <p>考虑全周期的sin(x)，<br>
+
 ```float sine(float x) 
 const float B = 4/pi; 
 const float C = -4/(pi*pi);
 float y = B * x + C * x * abs(x);
 const float P = 0.225; 
-y = P * (y * abs(y) - y) + y```<br>
+y = P * (y * abs(y) - y) + y
+```
+
 最终的速度也比4项泰勒级数展开式快，更精准。</p>
 <p>此算法综合出的硬件结构只需要用1 个 ABS、2 个乘法、2 个加法单元就可以完成三角函数的运算，并且，在寻优平台中可以根据精度和速度要求用移位和LUT进一步调整ppa的要求(如4/π 可以用移位替代:(x << 1) + (x >> 2))。</p>
 <p>若对精度有更进一步的要求，可以增加多项式次数<br>
@@ -105,7 +120,9 @@ int32_t q16_cose(int32_t x) {
 </p>
 <h3>线性插值:</h3>
 <p>利用对称性将三角函数的范围约束在[0,90°]， 用查找表分别储存sin(10°)，sin(20°)...sin(80°)以及cos(1°)，cos(2°)...cos(10°)的值，利用和角公式的近似式<br>
+
 ```sin(A+B)=sin(A)cos(B)+B \frac{π}{180°}sin(90°-A)```
+
 误差值完全来自sin(B)和B以及cosB的近似误差。</p>
 <p>代码如下:</p>
 <!DOCTYPE html>
