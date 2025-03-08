@@ -10,7 +10,7 @@ $$
 <p>在pi/2之前的效果还是很好的，但是在pi处的值比原来的0多了0.075，可以继续增加泰勒级数项的个数来减小误差。但是用4项的泰勒级数展开式就已经需要进行7次乘法和3次加法，资源占用很大。</p>
 <p>为了减少资源的占用，还可以用<strong>抛物线</strong>来拟合</p>
 <p align="center">
-    <img scr="parabola.png" alt="2">
+    <img scr="sin_cos/picture/average.jpg" alt="2">
 </p>
 $$
 \y = 4/pi x - 4/pi^2 x^2
