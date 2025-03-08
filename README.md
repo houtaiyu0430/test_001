@@ -65,6 +65,6 @@ protected void onDestroy() {
 $\frac{abc}{xyz}$
 
 (2)
- $$
+ $
  \frac{abc123}{xyz123}
- $$
+ $
