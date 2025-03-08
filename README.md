@@ -1,10 +1,10 @@
-#倒数平方根  
+# 倒数平方根  
 关于倒数平方根的算法，经查询常用的快速算法是引入常数**0x5f3759df**将浮点数整体移位后再使用牛顿迭代，这一方案较传统的直接使用牛顿迭代求平方根再求倒数更为快捷，使用更少的硬件资源
 将求 $\frac{1}{\sqrt{x}}$ 转化为求 f(y)= $\frac{1}{y^2} -x$ 的一个正根  
 根据牛顿迭代法的思想：给出一个根的合适近似 y_n ，那么一个更加近似的根 y_{n+1} = y_n-\frac{f(y_n)}{f(y_n)}'  
 [参考求解文章](https://zhuanlan.zhihu.com/p/571321688)  
-##C语言代码实现  
-
+## C语言代码实现  
+'''
 float Q_rsqrt(float x)
 {
     union {
@@ -15,7 +15,9 @@ float Q_rsqrt(float x)
     conv.f *= 1.5F - (number * 0.5F * conv.f * conv.f);
     return conv.f;
 }  
-##Verilog代码  
+'''
+## Verilog代码  
+'''
 module fast_inverse_sqrt (
     input wire [31:0] number,
     output wire [31:0] result
@@ -37,3 +39,4 @@ module fast_inverse_sqrt (
     assign result = new_y * correction;
 
 endmodule  
+'''
