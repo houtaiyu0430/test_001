@@ -65,10 +65,12 @@ protected void onDestroy() {
 $\frac{abc}{xyz}$
 
 (2)
-$\frac{abc123}{xyz123}$
+$\frac{abc123}{xyz123}$  
 （3）  
    \\begin{array}{cc}
      a & b \\\\
      c & c
-   \\end{array}
+   \\end{array}  
+   （4）  
+   $\frac{x^2}{2!}$
 
