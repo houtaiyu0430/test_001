@@ -5,12 +5,12 @@ $$
 \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!}
 $$
 <p align="center">
-    <img scr="./picture/taylor.png" alt="1">
+    <img src="./picture/taylor.png" alt="1">
 </p>
 <p>在pi/2之前的效果还是很好的，但是在pi处的值比原来的0多了0.075，可以继续增加泰勒级数项的个数来减小误差。但是用4项的泰勒级数展开式就已经需要进行7次乘法和3次加法，资源占用很大。</p>
 <p>为了减少资源的占用，还可以用<strong>抛物线</strong>来拟合</p>
 <p align="center">
-    <img scr="sin_cos/picture/average.jpg" alt="2">
+    <img src="picture/average.jpg" alt="2">
 </p>
 $$
 \y = 4/pi x - 4/pi^2 x^2
@@ -28,11 +28,11 @@ y=sin(x);
 <p>对于更高精度的要求，可以利用高次方把sinx的图像“按下去”</p>
 ```Q (4/pi x - 4/pi^2 x^2) + P (4/pi x - 4/pi^2 x^2)^2```
 <p align="center">
-    <img scr="squared.jpg" alt="3">
+    <img src="picture/squared.jpg" alt="3">
 </p>
 <p>绝对误差的最佳权值是：Q = 0.775, P = 0.225 ；相对误差的最佳权值是：Q = 0.782，P = 0.218 </p> 
 <p align="center">
-    <img scr="average.jpg" alt="4">
+    <img src="picture/average.jpg" alt="4">
 </p>
 <p>最大误差是<strong>0.001</strong></p>
 <p>考虑全周期的sin(x)，<br>
