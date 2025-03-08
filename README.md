@@ -66,11 +66,5 @@ $\frac{abc}{xyz}$
 
 (2)
 $\frac{abc123}{xyz123}$  
-（3）  
-   \\begin{array}{cc}
-     a & b \\\\
-     c & c
-   \\end{array}  
-   （4）  
-   $\frac{x^2}{2!}$
+将求*\frac{1}{\sqrt{x} }* 转化为求 *f(y)=\frac{1}{y^2} -x*
 
