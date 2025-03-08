@@ -67,9 +67,9 @@ $\frac{abc}{xyz}$
 (2)
 $\frac{abc123}{xyz123}$
 （3）  
-$$\left|\begin{matrix}
+$\left|\begin{matrix}
     a & b & c \\
     d & e & f \\
     g & h & i
-   \end{matrix} \right|$$
+   \end{matrix} \right|$
 
