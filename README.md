@@ -4,7 +4,7 @@
 根据牛顿迭代法的思想：给出一个根的合适近似 y_n ，那么一个更加近似的根 y_{n+1} = y_n-\frac{f(y_n)}{f(y_n)}'  
 [参考求解文章](https://zhuanlan.zhihu.com/p/571321688)  
 ##C语言代码实现  
-、、、
+、、、  
 float Q_rsqrt(float x)
 {
     union {
@@ -14,10 +14,10 @@ float Q_rsqrt(float x)
     conv.i  = 0x5f3759df - (conv.i >> 1);
     conv.f *= 1.5F - (number * 0.5F * conv.f * conv.f);
     return conv.f;
-}
+}  
 、、、  
 ##Verilog代码  
-、、、
+、、、  
 module fast_inverse_sqrt (
     input wire [31:0] number,
     output wire [31:0] result
@@ -38,5 +38,5 @@ module fast_inverse_sqrt (
     assign correction = 32'h3fc00000 - (x2 * new_y * new_y);
     assign result = new_y * correction;
 
-endmodule
+endmodule  
 、、、
