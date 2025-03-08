@@ -40,3 +40,11 @@ module fast_inverse_sqrt (
 
 endmodule  
 ```
+## 误差分析
+我们近似的认为: $\log _{2}(1+x) \approx x+\sigma$  
+根据切比雪夫公式: $\log _{2}(1+x) \approx x+\sigma \sigma=\frac{\log _{2}\left(\frac{1}{\ln 2}\right)-\frac{1}{\ln 2}+1}{2} \approx 0.043$  
+![拟合线](https://pic2.zhimg.com/v2-8507040a883bf269a4bd20ed8db6f019_r.jpg)  
+## 优化方向
+可以看到:该法的误差来源于上图中拟合线与实际曲线的误差，因此，后续优化可从此角度入手（？）  
+## 硬件资源
+（暂未研究）
